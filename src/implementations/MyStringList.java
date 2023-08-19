@@ -10,8 +10,8 @@ import java.util.stream.IntStream;
 
 public class MyStringList implements StringList {
 
-        private String[] storage;
-        private int capacity;
+        private final String[] storage;
+        private final int capacity;
         private int count;
 
         public MyStringList(int capacity) {
@@ -98,9 +98,8 @@ public class MyStringList implements StringList {
         @Override
         public String remove(int index) {
             checkIndex(index);
-            String result = storage[index];
 
-            return result;
+            return storage[index];
         }
 
         @Override
